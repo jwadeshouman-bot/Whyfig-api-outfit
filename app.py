@@ -55,7 +55,7 @@ def outfit_image():
         return {"error": "Key Error"}, 401
     
     try:
-        api_url = f"http://159.223.110.159:45667/Info?uid={uid}"
+        api_url = f"https://api-info-alliff-d5m.vercel.app/info={uid}"
         data = session.get(api_url).json()
     except:
         return {"error": "API Down"}, 500
